@@ -10,32 +10,34 @@ import ProfileList from '@/containers/profile/ProfileList';
 
 import authGuard from '../guards/auth.guard';
 
+import ROUTES from './app.routes';
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: [
     {
-      path: '/',
+      path: ROUTES.HOME,
       name: 'PostList',
       component: PostList,
     },
     {
-      path: '/posts/create',
+      path: ROUTES.POST_CREATE,
       name: 'PostCreate',
       component: PostCreate,
     },
     {
-      path: '/login',
+      path: ROUTES.LOGIN,
       name: 'Login',
       component: Login,
     },
     {
-      path: '/logout',
+      path: ROUTES.LOGOUT,
       name: 'Logout',
       component: Logout,
     },
     {
-      path: '/profile',
+      path: ROUTES.PROFILE,
       name: 'Profile',
       component: ProfileList,
     },

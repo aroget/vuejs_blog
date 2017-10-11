@@ -7,6 +7,7 @@
 <script>
 import PostForm from '../../components/PostForm';
 import PostService from './posts.service';
+import ROUTES from '../../router/app.routes';
 
 const service = new PostService();
 
@@ -21,7 +22,7 @@ export default {
     doSubmit: function doSubmit(data) {
       service
         .createPost(data)
-        .then(() => this.$router.push('/'))
+        .then(() => this.$router.push(ROUTES.HOME))
         .catch(err => console.log(err));
     },
   },

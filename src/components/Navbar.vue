@@ -1,7 +1,12 @@
 <template>
-  <ui-toolbar brand="Vue.js Blog" title="" type="colored" text-color="white" removeNavIcon>
+  <ui-toolbar
+    brand="Vue.js Blog"
+    title=""
+    type="colored"
+    text-color="white"
+    removeNavIcon>
     <div slot="actions">
-      <router-link to="/posts/create">
+      <router-link :to="`${postCreateUrl}`">
         <ui-icon-button
           color="white"
           icon="mode_edit"
@@ -11,7 +16,7 @@
         </ui-icon-button>
       </router-link>
 
-      <router-link to="/">
+      <router-link :to="`${homeUrl}`">
         <ui-icon-button
           color="white"
           icon="arrow_back"
@@ -43,6 +48,11 @@
 </template>
 
 <script>
+import ROUTES from '../router/app.routes';
+
+const homeUrl = ROUTES.HOME;
+const postCreateUrl = ROUTES.POST_CREATE;
+
 const menuOptions = [
   {
     id: 1,
@@ -52,13 +62,13 @@ const menuOptions = [
 
   {
     id: 2,
-    goTo: '/profile',
+    goTo: ROUTES.PROFILE,
     label: 'Profile',
   },
 
   {
     id: 3,
-    goTo: '/logout',
+    goTo: ROUTES.LOGOUT,
     label: 'Sign Out',
   },
 ];
@@ -67,7 +77,9 @@ export default {
 
   data() {
     return {
+      homeUrl,
       menuOptions,
+      postCreateUrl,
     };
   },
 
