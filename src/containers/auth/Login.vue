@@ -37,8 +37,8 @@
 
 <script>
 import AuthService from './auth.service';
-import appStorage from '../../shared/utils/storage';
 import ErrorService from '../../shared/services/error.service';
+import appStorage, { STORAGE_KEYS } from '../../shared/utils/storage';
 
 export default {
   name: 'login',
@@ -57,7 +57,7 @@ export default {
       AuthService
         .login(this.form)
         .then((res) => {
-          appStorage.set('user_id', res);
+          appStorage.set(STORAGE_KEYS.SESSION, res);
 
           this.$router.push('/');
         })

@@ -1,6 +1,14 @@
 import * as axios from 'axios';
 
-const baseUrl = 'http://localhost:3000';
+import isProd from '../shared/utils/env';
+
+let baseUrl;
+
+if (isProd) {
+  baseUrl = 'http://jaded-vest.surge.sh';
+} else {
+  baseUrl = 'http://localhost:3000';
+}
 
 export default class BaseService {
   static handleError(err) {
