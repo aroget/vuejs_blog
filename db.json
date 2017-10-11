@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "is_private": false,
+      "is_draft": false,
+      "author_id": 1,
+      "title": "Some Post",
+      "body": "Sopa de Caracol"
+    },
+    {
+      "id": 2,
+      "is_private": false,
+      "is_draft": false,
+      "author_id": 1,
+      "title": "Some Post 2",
+      "body": "Yo..."
+    },
+    {
+      "id": 3,
+      "is_private": false,
+      "is_draft": false,
+      "author_id": 1,
+      "title": "Some Post 3",
+      "body": "Sopa de Caracol"
+    },
+    {
+      "title": "Hello",
+      "body": "World",
+      "is_draft": false,
+      "is_public": true,
+      "is_active": true,
+      "author_id": 1,
+      "tags": null,
+      "id": 4
+    },
+    {
+      "title": "Material Post",
+      "body": "Hey There dudes",
+      "is_draft": true,
+      "is_public": true,
+      "is_active": true,
+      "author_id": 1,
+      "tags": null,
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Andres",
+      "last_name": "Roget",
+      "password": "password",
+      "email": "my@email.com",
+      "avatar": null,
+      "likes": [
+        1,
+        2
+      ]
+    }
+  ]
+}
