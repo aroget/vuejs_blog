@@ -1,9 +1,9 @@
-import RESOURCES from '../../api/resources';
+import API from '../../api';
 import BaseService from '../../base/base.service';
 
 
 export default class PostService extends BaseService {
-  resource = RESOURCES.POSTS;
+  resource = API.RESOURCES.POSTS;
 
   getPosts() {
     return BaseService

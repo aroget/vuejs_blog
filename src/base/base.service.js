@@ -1,13 +1,14 @@
 import * as axios from 'axios';
 
-import isProd from '../shared/utils/env';
+import API from '../api';
+import production from '../shared/utils/env';
 
 let baseUrl;
 
-if (isProd) {
-  baseUrl = 'http://jaded-vest.surge.sh';
+if (production) {
+  baseUrl = API.ENV.PROD;
 } else {
-  baseUrl = 'http://localhost:3000';
+  baseUrl = API.ENV.DEV;
 }
 
 export default class BaseService {

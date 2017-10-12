@@ -1,11 +1,11 @@
-import RESOURCES from '../../api/resources';
+import API from '../../api';
 import BaseService from '../../base/base.service';
 
 
 export default class AuthService extends BaseService {
-  loginUrl = RESOURCES.SESSION;
-  logOutUrl = RESOURCES.POSTS;
-  registerUrl = RESOURCES.POSTS;
+  loginUrl = API.RESOURCES.SESSION;
+  logOutUrl = API.RESOURCES.POSTS;
+  registerUrl = API.RESOURCES.POSTS;
 
   static fakeLogin(data) {
     const username = 'aroget';
