@@ -1,18 +1,32 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
-    </ul>
+  <div class="container">
+    <div class="row">
+      <post-card
+        class="col-xs-3"
+        :id="post.id"
+        :key="post.id"
+        :body="post.body"
+        :title="post.title"
+        v-for="post in posts"
+        :author="post.author_id"
+        :image="post.featured_image">
+      </post-card>
+    </div>
   </div>
 </template>
 
 <script>
 import PostService from './posts.service';
+import PostCard from '../../components/PostCard';
 
 const service = new PostService();
 
 export default {
   name: 'post-list',
+
+  components: {
+    PostCard,
+  },
 
   data: function data() {
     return {

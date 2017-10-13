@@ -2,11 +2,13 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import PostList from '@/containers/posts/PostList';
+import PostSingle from '@/containers/posts/PostSingle';
 import PostCreate from '@/containers/posts/PostCreate';
 
 import Login from '@/containers/auth/Login';
 import Logout from '@/containers/auth/Logout';
-import ProfileList from '@/containers/profile/ProfileList';
+
+import ProfileList from '@/containers/manage/profile/ProfileList';
 
 import authGuard from '../guards/auth.guard';
 
@@ -22,9 +24,14 @@ const router = new VueRouter({
       component: PostList,
     },
     {
-      path: ROUTES.POST_CREATE,
+      path: ROUTES.POSTS.CREATE,
       name: 'PostCreate',
       component: PostCreate,
+    },
+    {
+      path: ROUTES.POSTS.DETAILS,
+      name: 'PostSingle',
+      component: PostSingle,
     },
     {
       path: ROUTES.LOGIN,
@@ -37,7 +44,7 @@ const router = new VueRouter({
       component: Logout,
     },
     {
-      path: ROUTES.PROFILE,
+      path: ROUTES.MANAGE.PROFILE.VIEW,
       name: 'Profile',
       component: ProfileList,
     },

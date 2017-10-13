@@ -7,9 +7,13 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+import Session from './session';
+
 Vue.use(KeenUI);
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$session = new Session();
 
 /* eslint-disable no-new */
 new Vue({

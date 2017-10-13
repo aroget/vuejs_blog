@@ -7,7 +7,17 @@ export default {
 
   SIGNUP: '/register',
 
-  PROFILE: '/profile',
+  POSTS: {
+    LIST: '/posts/create',
+    CREATE: '/posts/create',
+    DETAILS: '/post/:post_id',
+    DELETE: '/post/:post_id/delete',
+  },
 
-  POST_CREATE: '/posts/create',
+  MANAGE: {
+    PROFILE: {
+      VIEW: '/manage/profile',
+      EDIT: '/manage/profile/edit',
+    },
+  },
 };

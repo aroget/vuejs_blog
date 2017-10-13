@@ -13,6 +13,10 @@ if (production) {
 
 export default class BaseService {
   static handleError(err) {
+    if (err.message === 'Network Error') {
+      console.warn('json-server not running...');
+      return;
+    }
     throw Error(err);
   }
 

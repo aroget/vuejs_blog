@@ -1,7 +1,6 @@
 <template>
   <div class="row center-xs">
     <div class="col-xs-3">
-
       <form v-on:submit.prevent="submitHandler">
         <ui-textbox
           floating-label
@@ -31,6 +30,12 @@
           Submit
         </ui-button>
       </form>
+
+      <br>
+
+      <ui-alert @dismiss="showError = false" type="error" v-show="showError">
+        Username or Password incorrect...
+      </ui-alert>
     </div>
   </div>
 </template>
@@ -45,6 +50,8 @@ export default {
 
   data: function data() {
     return {
+      showError: false,
+
       form: {
         username: null,
         password: null,
@@ -61,7 +68,10 @@ export default {
 
           this.$router.push('/');
         })
-        .catch(err => ErrorService.handle(err));
+        .catch((err) => {
+          this.showError = true;
+          ErrorService.handle(err);
+        });
     },
   },
 };

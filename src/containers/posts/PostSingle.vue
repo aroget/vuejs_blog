@@ -19,7 +19,6 @@ export default {
   },
 
   mounted: function mounted() {
-
     service
       .getPostById(2)
       .then((post) => { this.post = post; });

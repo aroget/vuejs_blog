@@ -51,7 +51,7 @@
 import ROUTES from '../router/app.routes';
 
 const homeUrl = ROUTES.HOME;
-const postCreateUrl = ROUTES.POST_CREATE;
+const postCreateUrl = ROUTES.POSTS.CREATE;
 
 const menuOptions = [
   {
@@ -62,7 +62,7 @@ const menuOptions = [
 
   {
     id: 2,
-    goTo: ROUTES.PROFILE,
+    goTo: ROUTES.MANAGE.PROFILE.VIEW,
     label: 'Profile',
   },
 
