@@ -4,7 +4,7 @@
       "id": 1,
       "is_private": false,
       "is_draft": false,
-      "author_id": 1,
+      "authorId": 1,
       "title": "Some Post",
       "body": "Sopa de Caracol",
       "featured_image": "https://source.unsplash.com/random/400x400?id=1"
@@ -13,7 +13,7 @@
       "id": 2,
       "is_private": false,
       "is_draft": false,
-      "author_id": 1,
+      "authorId": 2,
       "title": "Some Post 2",
       "body": "Yo...",
       "featured_image": "https://source.unsplash.com/random/400x400?id=2"
@@ -22,7 +22,7 @@
       "id": 3,
       "is_private": false,
       "is_draft": false,
-      "author_id": 1,
+      "authorId": 2,
       "title": "Some Post 3",
       "body": "Sopa de Caracol",
       "featured_image": "https://source.unsplash.com/random/400x400?id=3"
@@ -33,7 +33,7 @@
       "is_draft": false,
       "is_public": true,
       "is_active": true,
-      "author_id": 1,
+      "authorId": 1,
       "tags": null,
       "id": 4,
       "featured_image": "https://source.unsplash.com/random/400x400?id=4"
@@ -44,7 +44,7 @@
       "is_draft": true,
       "is_public": true,
       "is_active": true,
-      "author_id": 1,
+      "authorId": 1,
       "tags": null,
       "id": 5,
       "featured_image": "https://source.unsplash.com/random/400x400?id=5"
@@ -56,7 +56,7 @@
       "is_public": true,
       "featured_image": "https://source.unsplash.com/random/400x400",
       "is_active": true,
-      "author_id": 1,
+      "authorId": 1,
       "tags": null,
       "id": 6
     }
@@ -74,12 +74,26 @@
         1,
         2
       ]
+    },
+    {
+      "id": 2,
+      "first_name": "John",
+      "user_name": "jsmith",
+      "last_name": "Smith",
+      "password": "password",
+      "email": "john@smith.com",
+      "avatar": "https://d3iw72m71ie81c.cloudfront.net/male-29.jpg",
+      "likes": []
     }
   ],
   "authors": [
     {
       "id": 1,
-      "user_id": 1
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "userId": 2
     }
   ]
 }

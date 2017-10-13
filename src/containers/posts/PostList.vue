@@ -7,7 +7,7 @@
         :body="post.body"
         :title="post.title"
         v-for="post in posts"
-        :author="post.author_id"
+        :author="post.authorId"
         :image="post.featured_image"
         class="col-xs-12 col-sm-6 col-md-3">
       </post-card>

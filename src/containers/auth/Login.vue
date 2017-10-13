@@ -42,6 +42,7 @@
 
 <script>
 import AuthService from './auth.service';
+import ROUTES from '../../router/app.routes';
 import ErrorService from '../../shared/services/error.service';
 import appStorage, { STORAGE_KEYS } from '../../shared/utils/storage';
 
@@ -66,7 +67,7 @@ export default {
         .then((res) => {
           appStorage.set(STORAGE_KEYS.SESSION, res);
 
-          this.$router.push('/');
+          this.$router.push(ROUTES.HOME);
         })
         .catch((err) => {
           this.showError = true;

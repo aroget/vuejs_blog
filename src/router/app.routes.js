@@ -15,7 +15,7 @@ export default {
   },
 
   AUTHORS: {
-    LIST: '/authors/list',
+    LIST: '/authors',
     POSTS: '/authors/:author_id',
   },
 

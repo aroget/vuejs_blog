@@ -1,17 +1,21 @@
 import API from '../../api';
 import BaseService from '../../base/base.service';
 
-
 export default class AuthService extends BaseService {
   loginUrl = API.RESOURCES.SESSION;
   logOutUrl = API.RESOURCES.POSTS;
   registerUrl = API.RESOURCES.POSTS;
 
   static fakeLogin(data) {
-    const username = 'aroget';
-    const password = 'password';
-
-    return data.username === username && data.password === password ? 1 : new Error('User not found');
+    return BaseService
+      .get(`${API.RESOURCES.USERS}?user_name=${data.username}&password=${data.password}`)
+      .then((res) => {
+        if (res.data.length !== 1) {
+          return new Error('User not found');
+        }
+        return res.data[0].id;
+      })
+      .catch(() => new Error('User not found'));
   }
 
   static login(data) {

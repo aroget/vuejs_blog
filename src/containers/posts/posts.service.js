@@ -7,7 +7,7 @@ export default class PostService extends BaseService {
 
   getPosts() {
     return BaseService
-      .get(this.resource)
+      .get(`${this.resource}?_expand=author`)
       .then(res => res.data);
   }
 

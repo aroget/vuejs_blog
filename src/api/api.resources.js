@@ -4,6 +4,8 @@ const RESOURCES = {
   USERS: 'users',
 
   SESSION: 'users',
+
+  AUTHORS: 'authors',
 };
 
 export default RESOURCES;
