@@ -59,8 +59,9 @@ export default {
         body: null,
         is_draft: false,
         is_public: true,
+        featured_image: 'https://source.unsplash.com/random/400x400',
         is_active: true,
-        author_id: 1,
+        author_id: this.$session.g.get('user').id,
         tags: null,
       },
     };

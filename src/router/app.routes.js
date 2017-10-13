@@ -14,6 +14,18 @@ export default {
     DELETE: '/post/:post_id/delete',
   },
 
+  AUTHORS: {
+    LIST: '/authors/list',
+    POSTS: '/authors/:author_id',
+  },
+
+  // TAGS: {
+  //   LIST: '/tags/create',
+  //   CREATE: '/tags/create',
+  //   DETAILS: '/tag/:tag_id',
+  //   DELETE: '/tag/:tag_id/delete',
+  // },
+
   MANAGE: {
     PROFILE: {
       VIEW: '/manage/profile',

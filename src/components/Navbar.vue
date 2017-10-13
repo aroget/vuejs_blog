@@ -6,7 +6,9 @@
     text-color="white"
     removeNavIcon>
     <div slot="actions">
-      <router-link :to="`${postCreateUrl}`">
+      <router-link
+        :to="`${postCreateUrl}`"
+        v-if="!isComposeUrl && isAuthenticated">
         <ui-icon-button
           color="white"
           icon="mode_edit"
@@ -16,7 +18,9 @@
         </ui-icon-button>
       </router-link>
 
-      <router-link :to="`${homeUrl}`">
+      <router-link
+        :to="`${homeUrl}`"
+        v-if="!isHomeUrl && isAuthenticated">
         <ui-icon-button
           color="white"
           icon="arrow_back"
@@ -30,6 +34,7 @@
         color="white"
         has-dropdown
         icon="more_vert"
+        v-if="isAuthenticated"
         ref="dropdownButton1"
         size="large"
         type="secondary"
@@ -49,6 +54,7 @@
 
 <script>
 import ROUTES from '../router/app.routes';
+import appStorage, { STORAGE_KEYS } from '../shared/utils/storage';
 
 const homeUrl = ROUTES.HOME;
 const postCreateUrl = ROUTES.POSTS.CREATE;
@@ -80,7 +86,18 @@ export default {
       homeUrl,
       menuOptions,
       postCreateUrl,
+      isHomeUrl: true,
+      isComposeUrl: true,
+      isAuthenticated: false,
     };
+  },
+
+  watch: {
+    $route: function watchForRouteChanges(to) {
+      this.isHomeUrl = to.fullPath === ROUTES.HOME;
+      this.isComposeUrl = to.fullPath === ROUTES.POSTS.CREATE;
+      this.isAuthenticated = appStorage.get(STORAGE_KEYS.SESSION) !== null;
+    },
   },
 
   methods: {

@@ -48,6 +48,17 @@
       "tags": null,
       "id": 5,
       "featured_image": "https://source.unsplash.com/random/400x400?id=5"
+    },
+    {
+      "title": "New Post with random image",
+      "body": "Sup there",
+      "is_draft": false,
+      "is_public": true,
+      "featured_image": "https://source.unsplash.com/random/400x400",
+      "is_active": true,
+      "author_id": 1,
+      "tags": null,
+      "id": 6
     }
   ],
   "users": [
@@ -63,6 +74,12 @@
         1,
         2
       ]
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "user_id": 1
     }
   ]
 }

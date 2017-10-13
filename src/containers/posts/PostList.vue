@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <post-card
-        class="col-xs-3"
         :id="post.id"
         :key="post.id"
         :body="post.body"
         :title="post.title"
         v-for="post in posts"
         :author="post.author_id"
-        :image="post.featured_image">
+        :image="post.featured_image"
+        class="col-xs-12 col-sm-6 col-md-3">
       </post-card>
     </div>
   </div>
