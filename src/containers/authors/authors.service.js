@@ -20,7 +20,7 @@ export default class AuthorService extends BaseService {
   getPostsByAuthorId(authorID) {
     return BaseService
       .get(this.postsUrl)
-      .then(res => res.data.filter(post => post.author_id === +authorID));
+      .then(res => res.data.filter(post => post.authorId === +authorID));
   }
 
   getAuthorById(id) {

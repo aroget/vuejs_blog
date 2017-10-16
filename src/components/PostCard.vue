@@ -3,13 +3,13 @@
   <div class="card">
     <div class="card__thumb" v-bind:style="{ backgroundImage: 'url(' + image + ')' }"></div>
     <div class="card__meta">
-      <router-link :to="`post/${id}`">
+      <router-link :to="`/post/${id}`">
         <p class="card__title">{{ title }}</p>
       </router-link>
       <p class="card__description">{{ body }}</p>
 
       <div class="card__author">
-        <router-link :to="`authors/${author}`">@{{ author }}</router-link>
+        <router-link :to="`/authors/${author}`">@{{ author }}</router-link>
       </div>
     </div>
   </div>

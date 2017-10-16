@@ -61,7 +61,7 @@ export default {
         is_public: true,
         featured_image: 'https://source.unsplash.com/random/400x400',
         is_active: true,
-        author_id: this.$session.g.get('user').id,
+        authorId: this.$session.g.get('user').id,
         tags: null,
       },
     };

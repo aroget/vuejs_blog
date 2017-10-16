@@ -1,15 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "is_private": false,
-      "is_draft": false,
-      "authorId": 1,
-      "title": "Some Post",
-      "body": "Sopa de Caracol",
-      "featured_image": "https://source.unsplash.com/random/400x400?id=1"
-    },
-    {
       "id": 2,
       "is_private": false,
       "is_draft": false,
@@ -50,15 +41,15 @@
       "featured_image": "https://source.unsplash.com/random/400x400?id=5"
     },
     {
-      "title": "New Post with random image",
-      "body": "Sup there",
-      "is_draft": false,
-      "is_public": true,
+      "title": "More More",
+      "body": "Hell",
+      "is_draft": true,
+      "is_public": false,
       "featured_image": "https://source.unsplash.com/random/400x400",
       "is_active": true,
       "authorId": 1,
-      "tags": null,
-      "id": 6
+      "tags": [1, 3],
+      "id": 7
     }
   ],
   "users": [
@@ -84,6 +75,23 @@
       "email": "john@smith.com",
       "avatar": "https://d3iw72m71ie81c.cloudfront.net/male-29.jpg",
       "likes": []
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "label": "web",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "label": "design",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "label": "photography",
+      "userId": 1
     }
   ],
   "authors": [

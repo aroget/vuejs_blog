@@ -13,8 +13,8 @@ export default class PostService extends BaseService {
 
   getPostById(id) {
     return BaseService
-    .get(`${this.resource}/${id}`)
-    .then(res => res.data);
+      .get(`${this.resource}/${id}`)
+      .then(res => res.data);
   }
 
   createPost(data) {
@@ -23,11 +23,13 @@ export default class PostService extends BaseService {
       .then(res => res.data);
   }
 
+  deletePostById(postId) {
+    return BaseService
+      .delete(`${this.resource}/${postId}`)
+      .then(res => res.data);
+  }
+
   // updatePost() {
-
-  // }
-
-  // deletePost() {
 
   // }
 }

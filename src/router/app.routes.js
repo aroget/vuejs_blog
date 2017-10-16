@@ -11,6 +11,7 @@ export default {
     LIST: '/posts/create',
     CREATE: '/posts/create',
     DETAILS: '/post/:post_id',
+    EDIT: '/post/:post_id/edit',
     DELETE: '/post/:post_id/delete',
   },
 

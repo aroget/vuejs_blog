@@ -1,7 +1,7 @@
 <template>
   <ui-toolbar
     brand="Vue.js Blog"
-    title=""
+    :title="isAuthenticated ? userName() : ''"
     type="colored"
     text-color="white"
     removeNavIcon>
@@ -103,6 +103,11 @@ export default {
   methods: {
     onDropdownSelect: function onDropdownSelect(e) {
       this.$router.push(e.goTo);
+    },
+
+    userName: function userName() {
+      const user = this.$session.g.get('user');
+      return `${user.first_name} ${user.last_name}`;
     },
   },
 };

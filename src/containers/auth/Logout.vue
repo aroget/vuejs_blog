@@ -12,6 +12,7 @@ export default {
 
   beforeMount: function beforeMount() {
     appStorage.clear();
+    this.$session.g.clear();
     this.$router.push('/login');
   },
 };

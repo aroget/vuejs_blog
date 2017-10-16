@@ -31,4 +31,10 @@ export default class BaseService {
       .post(`${baseUrl}/${resource}`, data)
       .catch(err => BaseService.handleError(err));
   }
+
+  static delete(resource) {
+    return axios
+      .delete(`${baseUrl}/${resource}`)
+      .catch(err => BaseService.handleError(err));
+  }
 }
