@@ -1,1 +1,1 @@
-web: node npm run serve
+web: node node_modules/.bin/json-server --watch db.json --port=5000

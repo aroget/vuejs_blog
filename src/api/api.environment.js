@@ -1,5 +1,5 @@
 export default {
   DEV: 'http://localhost:3000',
 
-  PROD: 'http://jaded-vest.surge.sh',
+  PROD: 'https://glacial-castle-82004.herokuapp.com',
 };
