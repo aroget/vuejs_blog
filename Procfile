@@ -1,1 +1,1 @@
-web: node node_modules/.bin/json-server --watch db.json --port=5000 --host=glacial-castle-82004.herokuapp.com
+web: node node_modules/.bin/json-server https://github.com/aroget/vuejs_blog/blob/master/db.json --host=glacial-castle-82004.herokuapp.com --port=process.env.PORT
