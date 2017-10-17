@@ -15,7 +15,7 @@
             <div class="col-xs">
               <ui-button
                 buttonType="button">
-                {{ post.is_draft ? 'Published' : 'Set as Draft' }}
+                {{ post.is_draft ? 'Publish' : 'Set as Draft' }}
               </ui-button>
             </div>
             <div class="col-xs">

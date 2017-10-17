@@ -7,25 +7,21 @@ export default class AuthService extends BaseService {
   registerUrl = API.RESOURCES.SESSION;
 
   static fakeLogin(data) {
-    return BaseService
-      .get(`${API.RESOURCES.USERS}?user_name=${data.username}&password=${data.password}`)
-      .then((res) => {
-        if (res.data.length !== 1) {
-          return new Error('User not found');
-        }
-        return res.data[0].id;
-      })
-      .catch(() => new Error('User not found'));
+    const query = `?user_name=${data.username}&password=${data.password}`;
+    return BaseService.get(`${API.RESOURCES.USERS}${query}`);
   }
 
   static login(data) {
-    const userFound = AuthService.fakeLogin(data);
+    const fakeLogin = AuthService.fakeLogin(data);
 
-    if (!(userFound instanceof Error)) {
-      return Promise.resolve(AuthService.fakeLogin(data));
-    }
+    return fakeLogin
+      .then((res) => {
+        if (res.data.length !== 1) {
+          return Promise.reject('User not Found');
+        }
 
-    return Promise.reject(userFound);
+        return Promise.resolve(res.data[0].id);
+      });
   }
 
   static register(data) {
