@@ -23,6 +23,8 @@
 
         <br>
 
+        <p>No Account? <router-link :to="signupUrl">Sign Up</router-link></p>
+
         <ui-button
           color="primary"
           type="primary"
@@ -52,6 +54,8 @@ export default {
   data: function data() {
     return {
       showError: false,
+
+      signupUrl: ROUTES.SIGNUP,
 
       form: {
         username: null,

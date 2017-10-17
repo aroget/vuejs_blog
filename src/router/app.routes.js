@@ -28,6 +28,8 @@ export default {
   // },
 
   MANAGE: {
+    HOME: '/manage',
+
     PROFILE: {
       VIEW: '/manage/profile',
       EDIT: '/manage/profile/edit',

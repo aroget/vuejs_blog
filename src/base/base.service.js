@@ -32,6 +32,12 @@ export default class BaseService {
       .catch(err => BaseService.handleError(err));
   }
 
+  static update(resource, data) {
+    return axios
+      .put(`${baseUrl}/${resource}`, data)
+      .catch(err => BaseService.handleError(err));
+  }
+
   static delete(resource) {
     return axios
       .delete(`${baseUrl}/${resource}`)

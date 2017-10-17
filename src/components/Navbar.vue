@@ -62,7 +62,7 @@ const postCreateUrl = ROUTES.POSTS.CREATE;
 const menuOptions = [
   {
     id: 1,
-    goTo: '/manage',
+    goTo: ROUTES.MANAGE.HOME,
     label: 'Manage',
   },
 

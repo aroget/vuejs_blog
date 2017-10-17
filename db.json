@@ -53,6 +53,17 @@
         3
       ],
       "id": 7
+    },
+    {
+      "title": "Will Smith Post",
+      "body": "Some random text",
+      "is_draft": true,
+      "is_public": true,
+      "featured_image": "https://source.unsplash.com/random/400x400",
+      "is_active": true,
+      "authorId": 3,
+      "tags": null,
+      "id": 8
     }
   ],
   "users": [
@@ -80,11 +91,11 @@
       "likes": []
     },
     {
-      "first_name": "Demo",
-      "last_name": "User",
-      "user_name": "demo",
+      "first_name": "Will",
+      "last_name": "Smith",
+      "user_name": "wsmith",
       "password": "password",
-      "email": "demo@user.com",
+      "email": "will@smith.com",
       "avatar": null,
       "likes": [],
       "id": 3
@@ -115,6 +126,10 @@
     {
       "id": 2,
       "userId": 2
+    },
+    {
+      "id": 3,
+      "userId": 3
     }
   ]
 }
