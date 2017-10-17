@@ -12,8 +12,9 @@ const authGuard = router =>
     const session = Vue.prototype.$session;
     const sessionKey = appStorage.get(STORAGE_KEYS.SESSION);
 
-    if (to.name === 'Login') {
+    if (to.name === 'Login' || to.name === 'Register') {
       next();
+      return;
     }
 
     if (sessionKey) {

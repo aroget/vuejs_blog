@@ -107,7 +107,7 @@ export default {
 
     userName: function userName() {
       const user = this.$session.g.get('user');
-      return `${user.first_name} ${user.last_name}`;
+      return user ? `${user.first_name} ${user.last_name}` : '';
     },
   },
 };

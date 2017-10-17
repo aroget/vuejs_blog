@@ -5,7 +5,7 @@ export default {
 
   LOGOUT: '/logout',
 
-  SIGNUP: '/register',
+  SIGNUP: '/signup',
 
   POSTS: {
     LIST: '/posts/create',

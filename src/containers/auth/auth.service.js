@@ -4,7 +4,7 @@ import BaseService from '../../base/base.service';
 export default class AuthService extends BaseService {
   loginUrl = API.RESOURCES.SESSION;
   logOutUrl = API.RESOURCES.POSTS;
-  registerUrl = API.RESOURCES.POSTS;
+  registerUrl = API.RESOURCES.SESSION;
 
   static fakeLogin(data) {
     return BaseService
@@ -26,5 +26,11 @@ export default class AuthService extends BaseService {
     }
 
     return Promise.reject(userFound);
+  }
+
+  static register(data) {
+    return BaseService
+      .post(API.RESOURCES.SESSION, data)
+      .then(res => res.data);
   }
 }

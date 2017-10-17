@@ -2,7 +2,7 @@ import ROUTES from '../../router/app.routes';
 
 import Login from './Login';
 import Logout from './Logout';
-// import Register from './Register';
+import Register from './Register';
 
 export default [
   {
@@ -14,5 +14,10 @@ export default [
     path: ROUTES.LOGOUT,
     name: 'Logout',
     component: Logout,
+  },
+  {
+    path: ROUTES.SIGNUP,
+    name: 'Register',
+    component: Register,
   },
 ];
